@@ -1,0 +1,40 @@
+﻿<div style="font-family:Arial">
+
+    <script src="~/Scripts/jquery-1.8.2.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>
+
+
+    <h2>Students</h2>
+
+    @Ajax.ActionLink("All", "All",
+    new AjaxOptions
+    {
+        HttpMethod = "GET", // HttpMethod to use, GET or POST
+        UpdateTargetId = "divStudents", // ID of the HTML element to update
+        InsertionMode = InsertionMode.Replace // Replace the existing contents
+    })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Top 3", "Top3",
+    new AjaxOptions
+    {
+        HttpMethod = "GET", // HttpMethod to use, GET or POST
+        UpdateTargetId = "divStudents", // ID of the HTML element to update
+        InsertionMode = InsertionMode.Replace // Replace the existing contents
+    })
+
+    <span style="color:Blue">|</span>
+
+    @Ajax.ActionLink("Bottom 3", "Bottom3",
+    new AjaxOptions
+    {
+        HttpMethod = "GET", // HttpMethod to use, GET or POST
+        UpdateTargetId = "divStudents", // ID of the HTML element to update
+        InsertionMode = InsertionMode.Replace // Replace the existing contents
+    })
+
+    <br /><br />
+    <div id="divStudents">
+    </div>
+</div> 
